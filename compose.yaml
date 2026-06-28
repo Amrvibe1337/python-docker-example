@@ -3,9 +3,11 @@ services:
   # image (includes a shell and tools); the production stage of the
   # Dockerfile is unused in development.
   server:
-    build:
-      context: .
-      target: builder
+    image: amrvibe1337/python-docker-example:latest
+    # Для сборки локально у себя на хосте
+    #build:
+    #  context: .
+    #  target: builder
     ports:
       - 8000:8000
     environment:
